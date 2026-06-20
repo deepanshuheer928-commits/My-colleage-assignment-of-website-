@@ -1,0 +1,2761 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bolt Footwear — Premium performance shoes built for speed and style.">
+    <title>Bolt Footwear — Step Into Speed</title>
+
+    <!-- Favicon (inline bolt mark, no extra request) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230d2818'/%3E%3Cpath d='M13 2 4 14h6l-1 8 9-12h-6l1-8z' fill='%23f0a500'/%3E%3C/svg%3E">
+    <meta name="theme-color" content="#0d2818">
+
+    <!-- Social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bolt Footwear — Step Into Speed">
+    <meta property="og:description" content="Premium performance shoes built for speed and style. Shop the Blaze X1, Cloud Drift and Urban Street.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&auto=format&fit=crop&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bolt Footwear — Step Into Speed">
+    <meta name="twitter:description" content="Premium performance shoes built for speed and style.">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Bolt Footwear",
+      "description": "Premium performance footwear built for speed and style.",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200",
+      "priceRange": "$109.99 - $149.99",
+      "email": "deepanshuheer928@gmail.com"
+    }
+    </script>
+
+    <style>
+
+        /* ── CSS VARIABLES ─────────────────────────────────────── */
+        :root {
+            --green-dark:   #0d2818;
+            --green-mid:    #1a4a30;
+            --green-card:   #162e20;
+            --green-border: #244030;
+            --amber:        #f0a500;
+            --amber-dark:   #c88800;
+            --amber-light:  #ffc535;
+            --bg:           #f4f7f4;
+            --white:        #ffffff;
+            --text:         #111827;
+            --text-mid:     #4b5563;
+            --text-light:   #9ca3af;
+            --border:       #d1e0d5;
+            --shadow:       rgba(13, 40, 24, 0.09);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* ── ACCESSIBILITY: SKIP LINK & FOCUS STATES ───────────── */
+        .skip-link {
+            position: fixed;
+            top: -60px;
+            left: 16px;
+            z-index: 3000;
+            background-color: var(--amber);
+            color: var(--green-dark);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus { top: 16px; }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        summary:focus-visible {
+            outline: 2px solid var(--amber);
+            outline-offset: 3px;
+        }
+
+        /* ── SCROLL PROGRESS BAR ───────────────────────────────── */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--amber), var(--amber-light));
+            z-index: 1001;
+            transition: width 0.1s linear;
+        }
+
+        /* ── PROMO BAR ─────────────────────────────────────────── */
+        .promo-bar {
+            background-color: var(--amber);
+            color: var(--green-dark);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .promo-bar i { margin: 0 10px; }
+
+        .promo-dot {
+            font-size: 5px;
+            vertical-align: middle;
+            opacity: 0.5;
+            margin: 0 8px;
+        }
+
+        /* ── STICKY NAVBAR (glass) ──────────────────────────────── */
+        .navbar {
+            background-color: rgba(13,40,24,0.55);
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            padding: 0 22px;
+            margin: 14px 16px 0;
+            border-radius: 18px;
+            position: sticky;
+            top: 14px;
+            z-index: 999;
+            border: 1px solid rgba(255,255,255,0.14);
+            box-shadow: 0 10px 34px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(9,24,15,0.82);
+            box-shadow: 0 14px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+
+        /* hamburger button */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--amber);
+            border-radius: 2px;
+            transition: all 0.25s;
+        }
+
+        .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        .nb-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-badge {
+            background-color: var(--amber);
+            color: var(--green-dark);
+            padding: 7px 17px;
+            border: 2px solid var(--white);
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .brand-name {
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            opacity: 0.55;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .nav-links a {
+            color: #90b890;
+            text-decoration: none;
+            padding: 8px 14px;
+            font-size: 11.5px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-links a i {
+            margin-right: 5px;
+            color: var(--amber);
+        }
+
+        .nav-links a:hover {
+            color: var(--amber);
+            background-color: rgba(240, 165, 0, 0.1);
+        }
+
+        .nav-links a.active {
+            color: var(--amber);
+            background-color: rgba(240, 165, 0, 0.12);
+        }
+        .nav-links a.active i { color: var(--amber); }
+
+        .nav-cta {
+            background-color: var(--amber) !important;
+            color: var(--green-dark) !important;
+            font-weight: 800 !important;
+        }
+
+        .nav-cta i { color: var(--green-dark) !important; }
+
+        .nav-cta:hover {
+            background-color: var(--amber-dark) !important;
+            color: var(--white) !important;
+        }
+
+        /* ── HERO ──────────────────────────────────────────────── */
+        #home {
+            background-image: url('https://images.unsplash.com/photo-1556906781-9a412961a28c?w=1600&auto=format&fit=crop&q=85');
+            background-size: cover;
+            background-position: center 30%;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            border-bottom: 4px solid var(--amber);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(105deg, rgba(13,40,24,0.94) 40%, rgba(13,40,24,0.52) 100%);
+            width: 100%;
+            padding: 70px 48px;
+        }
+
+        /* ── HERO ENTRANCE (signature power-up sequence) ───────── */
+        @keyframes heroRise {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes boltFlash {
+            0%   { text-shadow: 0 0 0 rgba(240,165,0,0); }
+            45%  { text-shadow: 0 0 22px rgba(240,165,0,0.9), 0 0 46px rgba(240,165,0,0.4); }
+            100% { text-shadow: 0 0 0 rgba(240,165,0,0); }
+        }
+
+        .hero-tag, .hero-overlay h1, .hero-overlay p, .hero-btns, .hero-stats {
+            opacity: 0;
+            animation: heroRise 0.75s cubic-bezier(.22,1,.36,1) forwards;
+        }
+        .hero-tag        { animation-delay: 0.08s; }
+        .hero-overlay h1 { animation-delay: 0.22s; }
+        .hero-overlay p  { animation-delay: 0.40s; }
+        .hero-btns       { animation-delay: 0.56s; }
+        .hero-stats      { animation-delay: 0.72s; }
+
+        .hero-overlay h1 span {
+            display: inline-block;
+            animation: boltFlash 1.3s ease-out 1.1s;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--amber);
+            color: var(--green-dark);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            padding: 6px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-overlay h1 {
+            font-size: 72px;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.02;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            max-width: 680px;
+            margin-bottom: 22px;
+        }
+
+        .hero-overlay h1 span { color: var(--amber); }
+
+        .hero-overlay p {
+            font-size: 15px;
+            color: #a8c8a8;
+            line-height: 1.85;
+            max-width: 500px;
+            margin-bottom: 38px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-main, .btn-ghost {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-main::after, .btn-ghost::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -60%;
+            width: 35%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .btn-main:hover::after, .btn-ghost:hover::after { left: 130%; }
+
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--amber);
+            color: var(--green-dark);
+            text-decoration: none;
+            padding: 15px 36px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 2px solid var(--amber);
+            transition: all 0.2s;
+        }
+
+        .btn-main:hover { background-color: transparent; color: var(--amber); }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: transparent;
+            color: var(--white);
+            text-decoration: none;
+            padding: 15px 36px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 2px solid rgba(255,255,255,0.35);
+            transition: all 0.2s;
+        }
+
+        .btn-ghost:hover { border-color: var(--white); background-color: rgba(255,255,255,0.08); }
+
+        .hero-stats {
+            margin-top: 65px;
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .h-stat .num {
+            font-size: 34px;
+            font-weight: 900;
+            color: var(--amber);
+            line-height: 1;
+        }
+
+        .h-stat .lbl {
+            font-size: 10px;
+            color: #7aaa7a;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        /* ── TRUST BAR ─────────────────────────────────────────── */
+        .trust-bar {
+            max-width: 960px;
+            margin: -32px auto 0;
+            position: relative;
+            z-index: 5;
+            background-color: rgba(255,255,255,0.65);
+            backdrop-filter: blur(22px) saturate(180%);
+            -webkit-backdrop-filter: blur(22px) saturate(180%);
+            border: 1px solid rgba(255,255,255,0.55);
+            border-radius: 18px;
+            box-shadow: 0 16px 44px rgba(13,40,24,0.2);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 17px 36px;
+            border-right: 1px solid var(--border);
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--text-mid);
+            white-space: nowrap;
+        }
+
+        .trust-item:last-child { border-right: none; }
+        .trust-item i { font-size: 17px; color: var(--amber); }
+
+        /* ── PHOTO STRIP ───────────────────────────────────────── */
+        .photo-strip {
+            display: flex;
+            overflow: hidden;
+            height: 230px;
+        }
+
+        .photo-strip img {
+            width: 33.33%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.8);
+            transition: filter 0.4s;
+        }
+
+        .photo-strip img:hover { filter: brightness(1.0); }
+
+        /* ── SHARED SECTION HEADER ─────────────────────────────── */
+        .s-head {
+            text-align: center;
+            padding: 72px 20px 12px;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 8px;
+        }
+
+        .s-head h2 {
+            font-size: 36px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--green-dark);
+        }
+
+        .s-head h2 span { color: var(--amber); }
+        .s-head.lt h2 { color: var(--white); }
+
+        .s-line {
+            width: 50px;
+            height: 4px;
+            background-color: var(--amber);
+            border-radius: 3px;
+            margin: 12px auto 55px;
+        }
+
+        /* ── COMPARE MODELS TOGGLE & TABLE ─────────────────────── */
+        .compare-toggle-wrap {
+            text-align: center;
+            margin: -32px auto 40px;
+        }
+
+        .compare-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--white);
+            border: 1.5px solid var(--green-dark);
+            color: var(--green-dark);
+            padding: 11px 24px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .compare-toggle:hover,
+        .compare-toggle[aria-expanded="true"] {
+            background-color: var(--green-dark);
+            color: var(--amber);
+        }
+
+        .compare-toggle i.fa-chevron-down { transition: transform 0.25s; }
+        .compare-toggle[aria-expanded="true"] i.fa-chevron-down { transform: rotate(180deg); }
+
+        .compare-panel {
+            max-width: 920px;
+            margin: 0 auto 46px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s cubic-bezier(.22,1,.36,1);
+        }
+
+        .compare-panel.open { grid-template-rows: 1fr; }
+
+        .compare-panel-inner { overflow: hidden; }
+
+        .compare-table-wrap {
+            overflow-x: auto;
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: 0 6px 28px var(--shadow);
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 560px;
+            font-size: 13px;
+        }
+
+        .compare-table th, .compare-table td {
+            padding: 16px 18px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .compare-table thead th {
+            background-color: var(--green-dark);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .compare-table thead th:first-child { color: #9abf9a; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+        .compare-table thead th .ct-price { display: block; color: var(--amber); font-size: 17px; font-weight: 900; margin-top: 4px; }
+
+        .compare-table tbody th {
+            background-color: var(--bg);
+            color: var(--green-dark);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .compare-table tbody td { color: var(--text-mid); line-height: 1.6; }
+        .compare-table tbody tr:last-child th,
+        .compare-table tbody tr:last-child td { border-bottom: none; }
+
+        .compare-table .ct-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: var(--amber);
+            color: var(--green-dark);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 7px;
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+        .compare-table .ct-cta:hover { background-color: var(--amber-dark); }
+
+        @media (max-width: 768px) {
+            .compare-toggle-wrap { margin-top: -22px; }
+        }
+
+        /* ── COLLECTION ────────────────────────────────────────── */
+        #collection {
+            background-color: var(--bg);
+            padding-bottom: 70px;
+        }
+
+        .shoe-card {
+            display: flex;
+            max-width: 920px;
+            margin: 0 auto 28px;
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px var(--shadow);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .shoe-card:hover {
+            box-shadow: 0 12px 40px rgba(13,40,24,0.15);
+            transform: translateY(-3px);
+        }
+
+        .shoe-card.rev { flex-direction: row-reverse; }
+
+        .sc-img {
+            width: 45%;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .sc-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .shoe-card:hover .sc-img img { transform: scale(1.05); }
+
+        .sc-body {
+            padding: 38px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sc-num {
+            font-size: 68px;
+            font-weight: 900;
+            color: var(--border);
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+
+        .sc-badges {
+            display: flex;
+            gap: 7px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            padding: 4px 11px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .b-dark   { background: var(--green-dark); color: var(--amber); }
+        .b-amber  { background: var(--amber); color: var(--green-dark); }
+        .b-purple { background: #5a189a; color: #fff; }
+        .b-teal   { background: #0d6e6e; color: #fff; }
+
+        .sc-body h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--green-dark);
+            margin-bottom: 12px;
+        }
+
+        .sc-body > p {
+            font-size: 13.5px;
+            color: var(--text-mid);
+            line-height: 1.78;
+            margin-bottom: 18px;
+        }
+
+        .sc-features {
+            list-style: none;
+            margin-bottom: 26px;
+        }
+
+        .sc-features li {
+            font-size: 12px;
+            color: var(--text-mid);
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .sc-features li i {
+            color: var(--amber);
+            font-size: 11px;
+            width: 14px;
+        }
+
+        .sc-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        .sc-price {
+            font-size: 30px;
+            font-weight: 900;
+            color: var(--amber);
+        }
+
+        .sc-price small {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-left: 4px;
+        }
+
+        .sc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background-color: var(--green-dark);
+            color: var(--white);
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sc-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -60%;
+            width: 35%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .sc-btn:hover::after { left: 130%; }
+
+        .sc-btn:hover { background-color: var(--amber); color: var(--green-dark); }
+
+        /* ── ABOUT / FEATURES ──────────────────────────────────── */
+        #about {
+            background-color: var(--green-dark);
+            padding-bottom: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #about::before, #about::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(10px);
+            z-index: 0;
+        }
+
+        #about::before {
+            width: 420px; height: 420px;
+            background: radial-gradient(circle, rgba(240,165,0,0.22), transparent 70%);
+            top: -140px; left: -110px;
+        }
+
+        #about::after {
+            width: 380px; height: 380px;
+            background: radial-gradient(circle, rgba(255,197,53,0.13), transparent 70%);
+            bottom: -160px; right: -90px;
+        }
+
+        .about-intro, .feat-grid { position: relative; z-index: 1; }
+
+        .about-intro {
+            max-width: 680px;
+            margin: 0 auto 44px;
+            text-align: center;
+            font-size: 15px;
+            color: #9abf9a;
+            line-height: 1.85;
+            padding: 0 25px;
+        }
+
+        .about-intro strong { color: var(--amber); }
+
+        .feat-grid {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .feat-card {
+            flex: 1 1 calc(33.33% - 10px);
+            background-color: rgba(255,255,255,0.06);
+            backdrop-filter: blur(16px) saturate(160%);
+            -webkit-backdrop-filter: blur(16px) saturate(160%);
+            border: 1px solid rgba(255,255,255,0.13);
+            border-top: 3px solid var(--amber);
+            border-radius: 10px;
+            padding: 24px 22px;
+            transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s, background-color 0.25s;
+        }
+
+        .feat-card:hover {
+            border-color: var(--amber);
+            transform: translateY(-4px);
+            background-color: rgba(255,255,255,0.1);
+            box-shadow: 0 16px 38px rgba(240,165,0,0.16);
+        }
+
+        .feat-card i {
+            font-size: 24px;
+            color: var(--amber);
+            margin-bottom: 13px;
+            display: block;
+        }
+
+        .feat-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .feat-card p {
+            font-size: 12.5px;
+            color: #8aac8a;
+            line-height: 1.65;
+        }
+
+        /* ── TESTIMONIALS ──────────────────────────────────────── */
+        #testimonials {
+            background-color: var(--white);
+            padding-bottom: 70px;
+        }
+
+        .testi-wrap {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testi-card {
+            flex: 1 1 calc(33% - 14px);
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 24px;
+            transition: box-shadow 0.3s;
+        }
+
+        .testi-card:hover { box-shadow: 0 8px 28px var(--shadow); }
+
+        .testi-stars {
+            color: var(--amber);
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 14px;
+        }
+
+        .testi-text {
+            font-size: 13px;
+            color: var(--text-mid);
+            line-height: 1.78;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testi-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: var(--green-dark);
+            color: var(--amber);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .t-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .t-role {
+            font-size: 11px;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* ── LIFESTYLE PHOTOS ──────────────────────────────────── */
+        #lifestyle {
+            background-color: var(--green-dark);
+            padding-bottom: 70px;
+        }
+
+        .life-grid {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .life-img {
+            flex: 1 1 calc(33% - 11px);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--green-border);
+        }
+
+        .life-img img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.75);
+            transition: filter 0.35s, transform 0.35s;
+        }
+
+        .life-img:hover img { filter: brightness(1.0); transform: scale(1.05); }
+
+        .life-label {
+            background-color: var(--green-card);
+            padding: 11px 16px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--amber);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        /* ── ORDER FORM ────────────────────────────────────────── */
+        #order {
+            background-color: var(--bg);
+            padding-bottom: 70px;
+        }
+
+        .form-wrap {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 48px 54px;
+            box-shadow: 0 6px 32px var(--shadow);
+        }
+
+        .form-info-box {
+            background-color: #f0f9f0;
+            border: 1px solid #c8e0c8;
+            border-left: 4px solid var(--amber);
+            border-radius: 8px;
+            padding: 14px 18px;
+            font-size: 13px;
+            color: var(--text-mid);
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 1.6;
+        }
+
+        .form-info-box i { color: var(--amber); font-size: 17px; flex-shrink: 0; }
+
+        .f-section-title {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--green-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-bottom: 9px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 18px;
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .f-section-title:first-of-type { margin-top: 0; }
+        .f-section-title i { color: var(--amber); }
+
+        .f-row { margin-bottom: 16px; }
+
+        .f-row label {
+            display: block;
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #2a4a2a;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 7px;
+        }
+
+        .f-row label i { color: var(--amber); margin-right: 5px; }
+
+        .f-row input,
+        .f-row select,
+        .f-row textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            background-color: #fafcfa;
+            transition: border-color 0.2s;
+        }
+
+        .f-row input:focus,
+        .f-row select:focus,
+        .f-row textarea:focus {
+            outline: none;
+            border-color: var(--amber);
+            background-color: var(--white);
+        }
+
+        .f-row input::placeholder { color: #aac0aa; }
+        .f-row textarea { height: 90px; resize: vertical; }
+
+        /* ── INLINE FORM VALIDATION ─────────────────────────────── */
+        .f-row.invalid input,
+        .f-row.invalid select,
+        .f-row.invalid textarea {
+            border-color: #e0454f;
+            background-color: #fff5f5;
+        }
+
+        .f-row .f-error-msg {
+            display: none;
+            align-items: center;
+            gap: 6px;
+            color: #d6303a;
+            font-size: 11.5px;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        .f-row.invalid .f-error-msg { display: flex; }
+
+        .f-half { display: flex; gap: 16px; }
+        .f-half .f-row { flex: 1; }
+
+        /* ── QUANTITY STEPPER ───────────────────────────────────── */
+        .qty-stepper {
+            display: flex;
+            align-items: center;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fafcfa;
+        }
+
+        .qty-stepper button {
+            width: 42px;
+            height: 44px;
+            flex-shrink: 0;
+            background-color: var(--white);
+            border: none;
+            color: var(--green-dark);
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .qty-stepper button:hover { background-color: var(--amber); color: var(--green-dark); }
+        .qty-stepper button:disabled { opacity: 0.35; cursor: not-allowed; background-color: var(--white); color: var(--green-dark); }
+
+        .qty-stepper input {
+            flex: 1;
+            text-align: center;
+            border: none !important;
+            background: transparent !important;
+            padding: 0 !important;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* ── LIVE ORDER SUMMARY ─────────────────────────────────── */
+        .order-summary {
+            background-color: #0d2818;
+            background-image: linear-gradient(135deg, #0d2818, #163a24);
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin: 28px 0 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .os-detail { font-size: 12.5px; color: #9abf9a; line-height: 1.6; }
+        .os-detail strong { color: var(--white); font-weight: 700; }
+        .os-detail .os-empty { color: #7aaa7a; font-style: italic; }
+
+        .os-total { text-align: right; }
+        .os-total .os-label {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #7aaa7a;
+            margin-bottom: 2px;
+        }
+        .os-total .os-amount { font-size: 26px; font-weight: 900; color: var(--amber); }
+
+        @media (max-width: 480px) {
+            .order-summary { flex-direction: column; align-items: flex-start; }
+            .os-total { text-align: left; }
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--green-dark);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 800;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .submit-btn:hover { background-color: var(--amber); color: var(--green-dark); }
+
+        .secure-note {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .secure-note i { color: var(--amber); }
+
+        /* ── FAQ ───────────────────────────────────────────────── */
+        #faq {
+            background-color: var(--green-dark);
+            padding-bottom: 70px;
+        }
+
+        .faq-wrap {
+            max-width: 730px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        details {
+            background-color: var(--green-card);
+            border: 1px solid var(--green-border);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        details[open] { border-color: var(--amber); }
+
+        summary {
+            padding: 18px 22px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--white);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; font-size: 20px; color: var(--amber); font-weight: 300; }
+        details[open] summary::after { content: '−'; }
+
+        .faq-body {
+            padding: 2px 22px 20px;
+            font-size: 13px;
+            color: #8aac8a;
+            line-height: 1.78;
+        }
+
+        /* ── FOOTER ────────────────────────────────────────────── */
+        footer {
+            background-color: #060f09;
+            border-top: 3px solid var(--amber);
+            padding: 64px 70px 30px;
+        }
+
+        .foot-top {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #162e20;
+        }
+
+        .foot-brand { flex: 2 1 260px; }
+
+        .foot-logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: 4px;
+        }
+
+        .foot-logo i { color: var(--amber); margin-right: 8px; }
+
+        .foot-tagline {
+            font-size: 10.5px;
+            color: #6a9a6a;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 5px 0 16px;
+        }
+
+        .foot-desc {
+            font-size: 13px;
+            color: #7aaa7a;
+            line-height: 1.75;
+            margin-bottom: 22px;
+            max-width: 300px;
+        }
+
+        .soc-row a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #162e20;
+            border: 1px solid var(--green-border);
+            color: #8aaa8a;
+            width: 38px;
+            height: 38px;
+            border-radius: 7px;
+            font-size: 15px;
+            text-decoration: none;
+            margin-right: 7px;
+            transition: all 0.2s;
+        }
+
+        .soc-row a:hover { background-color: var(--amber); color: var(--green-dark); border-color: var(--amber); }
+
+        .foot-col { flex: 1 1 130px; }
+
+        .foot-col h5 {
+            font-size: 10.5px;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .foot-col ul { list-style: none; }
+
+        .foot-col ul li { margin-bottom: 11px; }
+
+        .foot-col ul li a {
+            font-size: 13px;
+            color: #7a9a7a;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .foot-col ul li a:hover { color: var(--amber); }
+        .foot-col ul li a i { margin-right: 7px; color: var(--amber); font-size: 10px; }
+
+        .foot-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .foot-copy { font-size: 12px; color: #5a7a5a; }
+        .foot-copy i { color: var(--amber); }
+
+        .foot-links a {
+            font-size: 11px;
+            color: #5a7a5a;
+            text-decoration: none;
+            margin-left: 18px;
+            transition: color 0.2s;
+        }
+
+        .foot-links a:hover { color: var(--amber); }
+
+        /* ── BACK TO TOP ───────────────────────────────────────── */
+        .back-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--amber);
+            color: var(--green-dark);
+            text-decoration: none;
+            padding: 13px;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+        }
+
+        .back-top:hover { background-color: var(--amber-dark); color: var(--white); }
+
+        /* ── FLOATING QUICK-ORDER BUTTON ───────────────────────── */
+        .quick-order {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            z-index: 900;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background-color: var(--amber);
+            color: var(--green-dark);
+            text-decoration: none;
+            padding: 15px 22px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 30px rgba(13,40,24,0.35);
+            opacity: 0;
+            transform: translateY(16px) scale(0.92);
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s;
+        }
+
+        .quick-order.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .quick-order:hover { background-color: var(--amber-dark); }
+
+        @media (max-width: 768px) {
+            .quick-order {
+                bottom: 18px;
+                right: 18px;
+                padding: 13px 18px;
+                font-size: 11.5px;
+            }
+        }
+
+        /* ── RESPONSIVE / MOBILE ───────────────────────────────── */
+        @media (max-width: 768px) {
+            .nav-toggle { display: flex; }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 74px;
+                left: 0;
+                right: 0;
+                background-color: rgba(9,24,15,0.9);
+                backdrop-filter: blur(20px) saturate(160%);
+                -webkit-backdrop-filter: blur(20px) saturate(160%);
+                border: 1px solid rgba(255,255,255,0.14);
+                border-radius: 16px;
+                padding: 12px 0 16px;
+                gap: 0;
+                z-index: 998;
+                box-shadow: 0 14px 36px rgba(0,0,0,0.4);
+            }
+
+            .nav-links.open { display: flex; }
+
+            .nav-links a {
+                padding: 12px 24px;
+                border-radius: 0;
+                width: 100%;
+                font-size: 13px;
+            }
+
+            .nav-cta {
+                margin: 8px 16px 0;
+                border-radius: 7px !important;
+                justify-content: center;
+            }
+
+            .hero-overlay {
+                padding: 50px 24px;
+            }
+
+            .trust-bar {
+                margin: -22px 16px 0;
+                border-radius: 14px;
+            }
+
+            .trust-item {
+                padding: 13px 18px;
+                font-size: 11px;
+            }
+
+            .hero-overlay h1 {
+                font-size: 44px;
+            }
+
+            .hero-stats {
+                gap: 28px;
+                margin-top: 44px;
+            }
+
+            .shoe-card, .shoe-card.rev {
+                flex-direction: column;
+            }
+
+            .sc-img { width: 100%; height: 220px; }
+
+            .sc-body { padding: 24px 22px; }
+
+            .feat-grid { padding: 0 16px; }
+            .feat-card { flex: 1 1 100%; }
+
+            .testi-wrap { padding: 0 16px; }
+            .testi-card { flex: 1 1 100%; }
+
+            .life-grid { padding: 0 16px; }
+            .life-img { flex: 1 1 100%; }
+
+            .form-wrap { padding: 28px 20px; margin: 0 16px; }
+            .f-half { flex-direction: column; gap: 0; }
+
+            footer { padding: 44px 24px 24px; }
+            .foot-top { gap: 32px; }
+
+            .photo-strip { flex-direction: column; height: auto; }
+            .photo-strip img { width: 100%; height: 180px; }
+        }
+
+        /* ── ORDER SUCCESS OVERLAY ─────────────────────────────── */
+        .order-success-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10,26,16,0.88);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            backdrop-filter: blur(3px);
+        }
+
+        .order-success-overlay.show {
+            display: flex;
+            animation: oscFadeIn 0.3s ease;
+        }
+
+        @keyframes oscFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .order-success-card {
+            background: var(--green-dark);
+            border: 2px solid var(--amber);
+            border-radius: 16px;
+            max-width: 420px;
+            width: 100%;
+            padding: 38px 30px;
+            text-align: center;
+            animation: oscPop 0.4s cubic-bezier(.34,1.56,.64,1);
+        }
+
+        @keyframes oscPop {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .osc-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--amber);
+            color: var(--green-dark);
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+
+        .order-success-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        .order-success-card p {
+            font-size: 14px;
+            color: #a8c8a8;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .order-success-card p strong { color: var(--amber); }
+
+        .osc-sub {
+            font-size: 13px;
+            color: #7aaa7a;
+            margin-bottom: 22px !important;
+        }
+
+        .osc-close {
+            background: var(--amber);
+            color: var(--green-dark);
+            border: none;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            padding: 13px 36px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .osc-close:hover { opacity: 0.88; }
+
+        /* ── TOAST NOTIFICATION (replaces alert()) ─────────────── */
+        .toast {
+            position: fixed;
+            left: 50%;
+            bottom: 28px;
+            transform: translate(-50%, 20px);
+            background-color: var(--green-dark);
+            color: var(--white);
+            border: 1px solid var(--green-border);
+            border-left: 4px solid #e0454f;
+            padding: 14px 20px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 90vw;
+            box-shadow: 0 14px 36px rgba(0,0,0,0.35);
+            z-index: 2500;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        .toast i { color: #e0454f; font-size: 15px; }
+
+        /* ── IMAGE LIGHTBOX ─────────────────────────────────────── */
+        .lightbox-trigger { cursor: zoom-in; }
+
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(6,15,9,0.94);
+            z-index: 2200;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .lightbox-overlay.show {
+            display: flex;
+            animation: oscFadeIn 0.25s ease;
+        }
+
+        .lightbox-figure {
+            max-width: 880px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .lightbox-figure img {
+            max-width: 100%;
+            max-height: 72vh;
+            object-fit: contain;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+            animation: oscPop 0.3s cubic-bezier(.34,1.56,.64,1);
+        }
+
+        .lightbox-caption {
+            margin-top: 16px;
+            color: #c8e0c8;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: fixed;
+            background-color: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.18);
+            color: var(--white);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .lightbox-close:hover,
+        .lightbox-prev:hover,
+        .lightbox-next:hover { background-color: var(--amber); color: var(--green-dark); border-color: var(--amber); }
+
+        .lightbox-close { top: 22px; right: 22px; }
+        .lightbox-prev { left: 22px; top: 50%; transform: translateY(-50%); }
+        .lightbox-next { right: 22px; top: 50%; transform: translateY(-50%); }
+
+        @media (max-width: 600px) {
+            .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 14px; }
+            .lightbox-prev { left: 8px; }
+            .lightbox-next { right: 8px; }
+            .lightbox-close { top: 10px; right: 10px; }
+        }
+
+        /* ── SCROLL REVEAL ──────────────────────────────────────── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── REDUCED MOTION ─────────────────────────────────────── */
+        @media (prefers-reduced-motion: reduce) {
+            .hero-tag, .hero-overlay h1, .hero-overlay p, .hero-btns, .hero-stats {
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .hero-overlay h1 span { animation: none !important; }
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .btn-main::after, .btn-ghost::after, .sc-btn::after {
+                display: none !important;
+            }
+            .quick-order, .toast { transition: opacity 0.15s ease !important; transform: none !important; }
+            .quick-order.show, .toast.show { transform: none !important; }
+            .lightbox-figure img { animation: none !important; }
+            .compare-panel { transition: none !important; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ════════════ PROMO BAR ════════════ -->
+    <div class="promo-bar">
+        <i class="fa-solid fa-truck-fast"></i>
+        Free Shipping on Orders Over $80
+        <i class="fa-solid fa-circle promo-dot"></i>
+        30-Day Free Returns
+        <i class="fa-solid fa-circle promo-dot"></i>
+        Premium Quality — Guaranteed
+        <i class="fa-solid fa-shield-halved"></i>
+    </div>
+
+    <!-- ════════════ NAVBAR ════════════ -->
+    <nav class="navbar">
+        <div class="nb-left">
+            <div class="logo-badge"><i class="fa-solid fa-bolt"></i> BOLT</div>
+            <span class="brand-name">Footwear</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="#collection"><i class="fa-solid fa-shoe-prints"></i>Collection</a>
+            <a href="#about"><i class="fa-solid fa-circle-info"></i>About</a>
+            <a href="#testimonials"><i class="fa-solid fa-star"></i>Reviews</a>
+            <a href="#faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+            <a href="#order" class="nav-cta"><i class="fa-solid fa-bolt"></i>Order Now</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ════════════ HERO ════════════ -->
+    <section id="home">
+    <span id="main-content"></span>
+        <div class="hero-overlay">
+            <div class="hero-tag">
+                <i class="fa-solid fa-bolt"></i> New Season — 2025 Collection
+            </div>
+            <h1>Built For<br>The <span>Fearless.</span></h1>
+            <p>Premium performance footwear engineered for people who never slow down. Every pair is crafted to move as fast as you think — on the track, on the street, everywhere in between.</p>
+            <div class="hero-btns">
+                <a href="#collection" class="btn-main">
+                    <i class="fa-solid fa-shoe-prints"></i> Shop Collection
+                </a>
+                <a href="#order" class="btn-ghost">
+                    <i class="fa-solid fa-bag-shopping"></i> Order Now
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="h-stat">
+                    <div class="num" data-count="12" data-suffix="K+">0</div>
+                    <div class="lbl">Happy Customers</div>
+                </div>
+                <div class="h-stat">
+                    <div class="num" data-count="3" data-suffix="">0</div>
+                    <div class="lbl">Signature Models</div>
+                </div>
+                <div class="h-stat">
+                    <div class="num" data-count="4.9" data-decimals="1" data-suffix-html=' <i class="fa-solid fa-star" style="font-size:21px;"></i>'>0 <i class="fa-solid fa-star" style="font-size:21px;"></i></div>
+                    <div class="lbl">Average Rating</div>
+                </div>
+                <div class="h-stat">
+                    <div class="num" data-count="30" data-suffix="">0</div>
+                    <div class="lbl">Day Free Returns</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ TRUST BAR ════════════ -->
+    <div class="trust-bar">
+        <div class="trust-item"><i class="fa-solid fa-truck-fast"></i> Free Shipping Over $80</div>
+        <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> 30-Day Returns</div>
+        <div class="trust-item"><i class="fa-solid fa-gem"></i> Premium Quality</div>
+        <div class="trust-item"><i class="fa-solid fa-headset"></i> 24/7 Support</div>
+        <div class="trust-item"><i class="fa-solid fa-lock"></i> Secure Checkout</div>
+    </div>
+
+    <!-- ════════════ PHOTO STRIP ════════════ -->
+    <div class="photo-strip">
+        <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1400&auto=format&fit=crop&q=85" data-caption="Bolt Blaze X1 — our flagship running shoe" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80" alt="Bolt Blaze X1" loading="lazy" decoding="async">
+        <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1400&auto=format&fit=crop&q=85" data-caption="Bolt Cloud Drift — all-day comfort" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&auto=format&fit=crop&q=80" alt="Bolt Cloud Drift" loading="lazy" decoding="async">
+        <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=1400&auto=format&fit=crop&q=85" data-caption="Bolt Urban Street — limited edition" src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&auto=format&fit=crop&q=80" alt="Bolt Urban Street" loading="lazy" decoding="async">
+    </div>
+
+    <!-- ════════════ COLLECTION ════════════ -->
+    <section id="collection">
+        <div class="s-head">
+            <div class="eyebrow"><i class="fa-solid fa-shoe-prints"></i> &nbsp; 2025 Lineup</div>
+            <h2>Our <span>Collection</span></h2>
+        </div>
+        <div class="s-line"></div>
+
+        <div class="compare-toggle-wrap">
+            <button type="button" class="compare-toggle" id="compareToggle" aria-expanded="false" aria-controls="comparePanel">
+                <i class="fa-solid fa-table-list"></i> Compare All 3 Models <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </div>
+
+        <div class="compare-panel" id="comparePanel">
+            <div class="compare-panel-inner">
+                <div class="compare-table-wrap">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">&nbsp;</th>
+                                <th scope="col">Blaze X1 <span class="ct-price">$129.99</span></th>
+                                <th scope="col">Cloud Drift <span class="ct-price">$109.99</span></th>
+                                <th scope="col">Urban Street <span class="ct-price">$149.99</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Best For</th>
+                                <td>Running &amp; training</td>
+                                <td>All-day, on-your-feet comfort</td>
+                                <td>Street style &amp; everyday wear</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Upper</th>
+                                <td>Breathable flyknit mesh</td>
+                                <td>Soft mesh, tri-density footbed</td>
+                                <td>Full-grain premium suede</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Outsole</th>
+                                <td>All-terrain rubber, deep grip</td>
+                                <td>Slip-resistant rubber pod</td>
+                                <td>Chunky vulcanised, heat-bonded</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Standout</th>
+                                <td>Carbon-infused energy return</td>
+                                <td>Ultralight — 220g per shoe</td>
+                                <td>Only 500 pairs worldwide</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Shop</th>
+                                <td><a href="#order" class="ct-cta compare-cta" data-model="blaze-x1">Choose <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="#order" class="ct-cta compare-cta" data-model="cloud-drift">Choose <i class="fa-solid fa-arrow-right"></i></a></td>
+                                <td><a href="#order" class="ct-cta compare-cta" data-model="urban-street">Choose <i class="fa-solid fa-arrow-right"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shoe 1 -->
+        <div class="shoe-card">
+            <div class="sc-img">
+                <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1400&auto=format&fit=crop&q=85" data-caption="Bolt Blaze X1 Running Shoe" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&auto=format&fit=crop&q=85" alt="Bolt Blaze X1 Running Shoe" loading="lazy" decoding="async">
+            </div>
+            <div class="sc-body">
+                <div class="sc-num">01</div>
+                <div class="sc-badges">
+                    <span class="badge b-dark">Bestseller</span>
+                    <span class="badge b-amber">Running</span>
+                </div>
+                <h3>Bolt Blaze X1</h3>
+                <p>Our flagship running shoe built for serious athletes and everyday warriors. The Blaze X1 uses a carbon-infused foam midsole for explosive energy return in every stride — whether you're racing a marathon or running late for class.</p>
+                <ul class="sc-features">
+                    <li><i class="fa-solid fa-check"></i> Carbon-infused foam midsole for energy return</li>
+                    <li><i class="fa-solid fa-check"></i> Breathable flyknit mesh upper</li>
+                    <li><i class="fa-solid fa-check"></i> All-terrain rubber outsole with deep grip</li>
+                    <li><i class="fa-solid fa-check"></i> Available in 6 colourways</li>
+                </ul>
+                <div class="sc-bottom">
+                    <div class="sc-price">$129.99 <small>/ pair</small></div>
+                    <a href="#order" class="sc-btn" data-model="blaze-x1"><i class="fa-solid fa-bag-shopping"></i> Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shoe 2 (reversed) -->
+        <div class="shoe-card rev">
+            <div class="sc-img">
+                <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=1400&auto=format&fit=crop&q=85" data-caption="Bolt Cloud Drift Lifestyle Shoe" src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=700&auto=format&fit=crop&q=85" alt="Bolt Cloud Drift Lifestyle Shoe" loading="lazy" decoding="async">
+            </div>
+            <div class="sc-body">
+                <div class="sc-num">02</div>
+                <div class="sc-badges">
+                    <span class="badge b-amber">New Arrival</span>
+                    <span class="badge b-dark">Lifestyle</span>
+                </div>
+                <h3>Bolt Cloud Drift</h3>
+                <p>Zero compromise on comfort. The Cloud Drift features a tri-density memory foam footbed that molds to your unique foot shape after just a few wears. Slip-resistant pod soles make it versatile for any surface — casual or semi-formal.</p>
+                <ul class="sc-features">
+                    <li><i class="fa-solid fa-check"></i> Tri-density memory foam insole</li>
+                    <li><i class="fa-solid fa-check"></i> Slip-resistant rubber pod outsole</li>
+                    <li><i class="fa-solid fa-check"></i> Minimalist clean silhouette</li>
+                    <li><i class="fa-solid fa-check"></i> Ultralight — only 220g per shoe</li>
+                </ul>
+                <div class="sc-bottom">
+                    <div class="sc-price">$109.99 <small>/ pair</small></div>
+                    <a href="#order" class="sc-btn" data-model="cloud-drift"><i class="fa-solid fa-bag-shopping"></i> Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shoe 3 -->
+        <div class="shoe-card">
+            <div class="sc-img">
+                <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=1400&auto=format&fit=crop&q=85" data-caption="Bolt Urban Street Limited Edition" src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=700&auto=format&fit=crop&q=85" alt="Bolt Urban Street Limited Edition" loading="lazy" decoding="async">
+            </div>
+            <div class="sc-body">
+                <div class="sc-num">03</div>
+                <div class="sc-badges">
+                    <span class="badge b-purple">Limited Edition</span>
+                    <span class="badge b-teal">Street</span>
+                </div>
+                <h3>Bolt Urban Street</h3>
+                <p>Where street culture meets premium craftsmanship. The Urban Street features a full-grain suede upper, padded leather collar, and a chunky vulcanised sole. Designed for the people who set the trends — not follow them. Only 500 pairs exist.</p>
+                <ul class="sc-features">
+                    <li><i class="fa-solid fa-check"></i> Full-grain premium suede upper</li>
+                    <li><i class="fa-solid fa-check"></i> Padded leather collar and tongue</li>
+                    <li><i class="fa-solid fa-check"></i> Chunky vulcanised sole — heat-bonded</li>
+                    <li><i class="fa-solid fa-check"></i> Limited run — only 500 pairs worldwide</li>
+                </ul>
+                <div class="sc-bottom">
+                    <div class="sc-price">$149.99 <small>/ pair</small></div>
+                    <a href="#order" class="sc-btn" data-model="urban-street"><i class="fa-solid fa-bag-shopping"></i> Order Now</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ════════════ ABOUT ════════════ -->
+    <section id="about">
+        <div class="s-head lt">
+            <div class="eyebrow"><i class="fa-solid fa-bolt"></i> &nbsp; The Bolt Promise</div>
+            <h2>Why Choose <span>Bolt?</span></h2>
+        </div>
+        <div class="s-line"></div>
+
+        <p class="about-intro">
+            At <strong>Bolt Footwear</strong>, we believe every step you take should feel like a statement. Founded with a passion for performance and a love for bold design, we bring you shoes that don't just look great — they <strong>perform even better</strong>. Every pair is tested on real terrain before it earns the Bolt name.
+        </p>
+
+        <div class="feat-grid">
+            <div class="feat-card">
+                <i class="fa-solid fa-gem"></i>
+                <h4>Premium Grade Materials</h4>
+                <p>Only the finest flyknit mesh, full-grain suede, and Italian rubber compounds are used — no shortcuts, no compromises.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fa-solid fa-person-running"></i>
+                <h4>Ergonomic Performance</h4>
+                <p>Developed with certified podiatrists for correct arch support, heel alignment, and natural gait across all terrain types.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fa-solid fa-cloud"></i>
+                <h4>All-Day Comfort Tech</h4>
+                <p>Tri-density memory foam insoles adapt to your foot shape over time — by day three, they feel custom-made just for you.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Built to Last Long</h4>
+                <p>Double-stitched seams, reinforced toe caps, and heat-bonded outsoles built to outlast every pair you've ever owned.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fa-solid fa-palette"></i>
+                <h4>Style-Forward Design</h4>
+                <p>Our design team works seasons ahead to make sure you're always wearing tomorrow's look, today — before anyone else.</p>
+            </div>
+            <div class="feat-card">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h4>30-Day Free Returns</h4>
+                <p>Not happy with your pair? Send it back within 30 days for a full refund. No questions, no drama, guaranteed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ TESTIMONIALS ════════════ -->
+    <section id="testimonials">
+        <div class="s-head">
+            <div class="eyebrow"><i class="fa-solid fa-star"></i> &nbsp; Customer Reviews</div>
+            <h2>What People <span>Say</span></h2>
+        </div>
+        <div class="s-line"></div>
+
+        <div class="testi-wrap">
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Bought the Blaze X1 for my morning runs and these are genuinely the best shoes I've ever owned. Super lightweight, great grip, and my knees don't ache after 10K anymore. 100% worth every penny."</p>
+                <div class="testi-author">
+                    <div class="t-avatar">M</div>
+                    <div>
+                        <div class="t-name">Marcus T.</div>
+                        <div class="t-role">Verified Buyer — Blaze X1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"The Cloud Drift is absolutely unreal. I work 12-hour hospital shifts on my feet and these made a massive difference. The memory foam is incredible. Already told everyone I work with to get a pair."</p>
+                <div class="testi-author">
+                    <div class="t-avatar">S</div>
+                    <div>
+                        <div class="t-name">Sophia R.</div>
+                        <div class="t-role">Verified Buyer — Cloud Drift</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Got the Urban Street in the limited drop and they are genuinely fire. The suede quality is premium, the sole is thick and chunky — exactly what I wanted. Delivery was fast too. Will definitely order again."</p>
+                <div class="testi-author">
+                    <div class="t-avatar">J</div>
+                    <div>
+                        <div class="t-name">Jordan K.</div>
+                        <div class="t-role">Verified Buyer — Urban Street</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ LIFESTYLE ════════════ -->
+    <section id="lifestyle">
+        <div class="s-head lt">
+            <div class="eyebrow"><i class="fa-solid fa-camera"></i> &nbsp; The Bolt Life</div>
+            <h2>Worn By <span>The Bold</span></h2>
+        </div>
+        <div class="s-line"></div>
+
+        <div class="life-grid">
+            <div class="life-img">
+                <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1400&auto=format&fit=crop&q=85" data-caption="Sneakers worn on the street" src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&auto=format&fit=crop&q=80" alt="Sneakers worn on the street" loading="lazy" decoding="async">
+                <div class="life-label"><i class="fa-solid fa-map-pin"></i> Street Ready</div>
+            </div>
+            <div class="life-img">
+                <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=1400&auto=format&fit=crop&q=85" data-caption="Running shoe close up detail" src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=500&auto=format&fit=crop&q=80" alt="Running shoe close up detail" loading="lazy" decoding="async">
+                <div class="life-label"><i class="fa-solid fa-person-running"></i> Built for Speed</div>
+            </div>
+            <div class="life-img">
+                <img class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1539185441755-769473a23570?w=1400&auto=format&fit=crop&q=85" data-caption="Colourful shoe pair lifestyle" src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&auto=format&fit=crop&q=80" alt="Colourful shoe pair lifestyle" loading="lazy" decoding="async">
+                <div class="life-label"><i class="fa-solid fa-fire"></i> Own the Look</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ ORDER FORM ════════════ -->
+    <section id="order">
+        <div class="s-head">
+            <div class="eyebrow"><i class="fa-solid fa-bag-shopping"></i> &nbsp; Get Yours Today</div>
+            <h2>Place Your <span>Order</span></h2>
+        </div>
+        <div class="s-line"></div>
+
+        <div class="form-wrap">
+            <div class="form-info-box">
+                <i class="fa-solid fa-circle-info"></i>
+                Fill out the form below and our team will confirm your order within 24 hours via email. Free shipping on all orders above $80.
+            </div>
+
+            <form action="https://formsubmit.co/deepanshuheer928@gmail.com" method="post" id="orderForm">
+
+                <input type="hidden" name="_subject" value="⚡ New Bolt Footwear Order!">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="f-section-title"><i class="fa-solid fa-user"></i> Personal Information</div>
+
+                <div class="f-half">
+                    <div class="f-row">
+                        <label for="fname"><i class="fa-solid fa-user"></i> First Name</label>
+                        <input type="text" id="fname" name="first_name" placeholder="e.g. Alex" required>
+                        <div class="f-error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Please enter your first name.</span></div>
+                    </div>
+                    <div class="f-row">
+                        <label for="lname"><i class="fa-solid fa-user"></i> Last Name</label>
+                        <input type="text" id="lname" name="last_name" placeholder="e.g. Johnson" required>
+                        <div class="f-error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Please enter your last name.</span></div>
+                    </div>
+                </div>
+
+                <div class="f-half">
+                    <div class="f-row">
+                        <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="alex@example.com" required>
+                        <div class="f-error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Enter a valid email so we can confirm your order.</span></div>
+                    </div>
+                    <div class="f-row">
+                        <label for="phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 555 000 1234">
+                    </div>
+                </div>
+
+                <div class="f-section-title"><i class="fa-solid fa-shoe-prints"></i> Order Details</div>
+
+                <div class="f-half">
+                    <div class="f-row">
+                        <label for="model"><i class="fa-solid fa-shoe-prints"></i> Shoe Model</label>
+                        <select id="model" name="model" required>
+                            <option value="" disabled selected>-- Choose a Model --</option>
+                            <option value="blaze-x1">Bolt Blaze X1 — $129.99</option>
+                            <option value="cloud-drift">Bolt Cloud Drift — $109.99</option>
+                            <option value="urban-street">Bolt Urban Street — $149.99</option>
+                        </select>
+                        <div class="f-error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Please choose a shoe model.</span></div>
+                    </div>
+                    <div class="f-row">
+                        <label for="color"><i class="fa-solid fa-palette"></i> Preferred Colour</label>
+                        <select id="color" name="color">
+                            <option value="" disabled selected>-- Choose Colour --</option>
+                            <option value="black">Classic Black</option>
+                            <option value="white">Clean White</option>
+                            <option value="red">Bolt Red</option>
+                            <option value="navy">Midnight Navy</option>
+                            <option value="grey">Storm Grey</option>
+                            <option value="olive">Forest Olive</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="f-half">
+                    <div class="f-row">
+                        <label for="size"><i class="fa-solid fa-ruler-horizontal"></i> Shoe Size (US)</label>
+                        <select id="size" name="size" required>
+                            <option value="" disabled selected>-- Select Your Size --</option>
+                            <option>US 5</option>
+                            <option>US 6</option>
+                            <option>US 7</option>
+                            <option>US 8</option>
+                            <option>US 9</option>
+                            <option>US 10</option>
+                            <option>US 11</option>
+                            <option>US 12</option>
+                            <option>US 13</option>
+                            <option>US 14</option>
+                        </select>
+                        <div class="f-error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Please select your shoe size.</span></div>
+                    </div>
+                    <div class="f-row">
+                        <label for="qty"><i class="fa-solid fa-hashtag"></i> Quantity</label>
+                        <div class="qty-stepper">
+                            <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+                            <input type="text" id="qty" name="quantity" value="1" readonly inputmode="numeric" aria-live="polite">
+                            <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-section-title"><i class="fa-solid fa-location-dot"></i> Delivery Address</div>
+
+                <div class="f-row">
+                    <label for="address"><i class="fa-solid fa-location-dot"></i> Street Address</label>
+                    <input type="text" id="address" name="address" placeholder="e.g. 123 Main Street, Apt 4B" required>
+                    <div class="f-error-msg"><i class="fa-solid fa-circle-exclamation"></i><span>Please enter a delivery address.</span></div>
+                </div>
+
+                <div class="f-half">
+                    <div class="f-row">
+                        <label for="city"><i class="fa-solid fa-city"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="e.g. New York">
+                    </div>
+                    <div class="f-row">
+                        <label for="zip"><i class="fa-solid fa-map-pin"></i> ZIP / Postal Code</label>
+                        <input type="text" id="zip" name="zip" placeholder="e.g. 10001">
+                    </div>
+                </div>
+
+                <div class="f-row">
+                    <label for="notes"><i class="fa-solid fa-note-sticky"></i> Order Notes (Optional)</label>
+                    <textarea id="notes" name="notes" placeholder="Special requests, gift wrapping, or delivery instructions..."></textarea>
+                </div>
+
+                <div class="order-summary">
+                    <div class="os-detail" id="osDetail"><span class="os-empty">Pick a model above to see your total</span></div>
+                    <div class="os-total">
+                        <div class="os-label">Estimated Total</div>
+                        <div class="os-amount" id="osAmount">$0.00</div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fa-solid fa-bolt"></i> Confirm My Order
+                </button>
+
+                <div class="secure-note">
+                    <i class="fa-solid fa-lock"></i> Your personal information is 100% secure and encrypted.
+                </div>
+
+            </form>
+        </div>
+
+        <!-- ════════════ ORDER CONFIRMATION OVERLAY ════════════ -->
+        <div class="order-success-overlay" id="orderSuccessOverlay">
+            <div class="order-success-card">
+                <div class="osc-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Boom! You're Bolted In ⚡</h3>
+                <p>Built this whole site myself 😎🔥 Liked it? Shoot me a review at <strong>deepanshuheer928@gmail.com</strong> — means a lot!</p>
+                <button type="button" class="osc-close" id="oscCloseBtn">Let's Gooo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ FAQ ════════════ -->
+    <section id="faq">
+        <div class="s-head lt">
+            <div class="eyebrow"><i class="fa-solid fa-circle-question"></i> &nbsp; Got Questions?</div>
+            <h2>Frequently <span>Asked</span></h2>
+        </div>
+        <div class="s-line"></div>
+
+        <div class="faq-wrap">
+
+            <details>
+                <summary>How long does delivery take?</summary>
+                <div class="faq-body">
+                    Standard delivery takes 3–5 business days within the US. Express shipping (1–2 days) is available at checkout for a small additional fee. All orders placed before 2 PM EST are dispatched the same business day.
+                </div>
+            </details>
+
+            <details>
+                <summary>What is your return policy?</summary>
+                <div class="faq-body">
+                    We offer a hassle-free 30-day return policy on all orders. If you're not fully satisfied with your purchase, simply send the shoes back in their original condition and packaging, and we'll issue a full refund within 5–7 business days — no questions asked.
+                </div>
+            </details>
+
+            <details>
+                <summary>How do I know which size to order?</summary>
+                <div class="faq-body">
+                    Bolt shoes generally fit true to US sizing. If you're between sizes, we recommend going half a size up for the Blaze X1 running shoe for extra toe room during runs. The Cloud Drift and Urban Street fit standard US sizing accurately. When in doubt, go half a size up.
+                </div>
+            </details>
+
+            <details>
+                <summary>Are Bolt shoes suitable for wide feet?</summary>
+                <div class="faq-body">
+                    Yes! All Bolt models are designed with a slightly generous toe box to accommodate wider feet comfortably. The Cloud Drift has the widest natural fit across our range. For very wide feet, we suggest sizing up by half a size for the best comfort.
+                </div>
+            </details>
+
+            <details>
+                <summary>Can I cancel or change my order after placing it?</summary>
+                <div class="faq-body">
+                    Orders can be modified or cancelled within 2 hours of placement. After that, the order enters our fulfilment process and changes may not be possible. Contact us immediately at <strong style="color:#f0a500;">deepanshuheer928@gmail.com</strong> and we'll do our best to assist you before dispatch.
+                </div>
+            </details>
+
+            <details>
+                <summary>Do you ship internationally?</summary>
+                <div class="faq-body">
+                    Yes, we ship to over 40 countries worldwide. International shipping typically takes 7–14 business days. Duties and taxes may apply depending on your country's import regulations — these are the responsibility of the customer. Shipping rates are calculated at checkout.
+                </div>
+            </details>
+
+            <details>
+                <summary>Are the shoes waterproof?</summary>
+                <div class="faq-body">
+                    The Blaze X1 and Cloud Drift feature water-resistant mesh uppers that can handle light rain and damp surfaces. The Urban Street suede model is not water-resistant and should be treated with a suede protector spray before outdoor use. None of our current models are fully waterproof.
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- ════════════ FOOTER ════════════ -->
+    <footer>
+        <div class="foot-top">
+
+            <div class="foot-brand">
+                <div class="foot-logo"><i class="fa-solid fa-bolt"></i> BOLT FOOTWEAR</div>
+                <div class="foot-tagline">Step Into Speed. Step Into Style.</div>
+                <p class="foot-desc">Born for the streets. Built for the bold. Bolt brings you premium performance footwear that blends cutting-edge design with unmatched everyday comfort.</p>
+                <div class="soc-row">
+                    <a href="https://www.instagram.com/depanshu._.x?igsh=MXJ4MXlxY3ZkamttaQ==" target="_blank" title="Bolt on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/depanshu._.x?igsh=MXJ4MXlxY3ZkamttaQ==" target="_blank" title="Bolt on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com/@alltypecontent-s3d?si=bR3PEFe-7X9wAXLv" target="_blank" title="Bolt on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="foot-col">
+                <h5>Shop</h5>
+                <ul>
+                    <li><a href="#collection"><i class="fa-solid fa-chevron-right"></i>Bolt Blaze X1</a></li>
+                    <li><a href="#collection"><i class="fa-solid fa-chevron-right"></i>Bolt Cloud Drift</a></li>
+                    <li><a href="#collection"><i class="fa-solid fa-chevron-right"></i>Bolt Urban Street</a></li>
+                    <li><a href="#order"><i class="fa-solid fa-chevron-right"></i>Place an Order</a></li>
+                </ul>
+            </div>
+
+            <div class="foot-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#about"><i class="fa-solid fa-chevron-right"></i>About Bolt</a></li>
+                    <li><a href="#testimonials"><i class="fa-solid fa-chevron-right"></i>Customer Reviews</a></li>
+                    <li><a href="#lifestyle"><i class="fa-solid fa-chevron-right"></i>Lifestyle</a></li>
+                    <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i>FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="foot-col">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i>Returns Policy</a></li>
+                    <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i>Size Guide</a></li>
+                    <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i>Shipping Info</a></li>
+                    <li><a href="mailto:deepanshuheer928@gmail.com"><i class="fa-solid fa-chevron-right"></i>Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="foot-bottom">
+            <div class="foot-copy">
+                &copy; 2025 Bolt Footwear. All Rights Reserved. &nbsp;|&nbsp;
+                Made with <i class="fa-solid fa-heart"></i> for people who never stop moving.
+            </div>
+            <div class="foot-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════════════ IMAGE LIGHTBOX ════════════ -->
+    <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true" aria-label="Image preview">
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close image preview"><i class="fa-solid fa-xmark"></i></button>
+        <button type="button" class="lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <figure class="lightbox-figure">
+            <img id="lightboxImg" src="" alt="">
+            <figcaption class="lightbox-caption" id="lightboxCaption"></figcaption>
+        </figure>
+        <button type="button" class="lightbox-next" id="lightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- ════════════ FLOATING QUICK ORDER ════════════ -->
+    <a href="#order" class="quick-order" id="quickOrderBtn">
+        <i class="fa-solid fa-bag-shopping"></i> Quick Order
+    </a>
+
+    <!-- ════════════ TOAST (error notifications) ════════════ -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span id="toastMsg">Something went wrong.</span>
+    </div>
+
+    <!-- ════════════ BACK TO TOP ════════════ -->
+    <a href="#top" class="back-top">
+        <i class="fa-solid fa-chevron-up"></i> Back to Top
+    </a>
+
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const links  = document.getElementById('navLinks');
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+            toggle.classList.toggle('active');
+        });
+        // Close menu when a link is clicked
+        links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            links.classList.remove('open');
+            toggle.classList.remove('active');
+        }));
+
+        // Toast helper — friendlier than alert() and matches the site's voice
+        const toastEl = document.getElementById('toast');
+        const toastMsgEl = document.getElementById('toastMsg');
+        let toastTimer;
+        function showToast(message) {
+            toastMsgEl.textContent = message;
+            toastEl.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toastEl.classList.remove('show'), 4500);
+        }
+
+        // Order form — submit via AJAX, then show a cute confirmation
+        const orderForm = document.getElementById('orderForm');
+        const successOverlay = document.getElementById('orderSuccessOverlay');
+        const oscCloseBtn = document.getElementById('oscCloseBtn');
+
+        if (orderForm) {
+            const validatedFields = ['fname', 'lname', 'email', 'model', 'size', 'address'];
+
+            function clearFieldError(field) {
+                const row = field.closest('.f-row');
+                if (row) row.classList.remove('invalid');
+            }
+
+            function showFieldError(field) {
+                const row = field.closest('.f-row');
+                if (row) row.classList.add('invalid');
+            }
+
+            validatedFields.forEach(id => {
+                const field = document.getElementById(id);
+                if (!field) return;
+                field.addEventListener('input', () => clearFieldError(field));
+                field.addEventListener('change', () => clearFieldError(field));
+            });
+
+            function validateOrderForm() {
+                let firstInvalid = null;
+                validatedFields.forEach(id => {
+                    const field = document.getElementById(id);
+                    if (!field) return;
+                    clearFieldError(field);
+                    if (!field.checkValidity()) {
+                        showFieldError(field);
+                        if (!firstInvalid) firstInvalid = field;
+                    }
+                });
+                return firstInvalid;
+            }
+
+            orderForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const firstInvalid = validateOrderForm();
+                if (firstInvalid) {
+                    firstInvalid.focus();
+                    firstInvalid.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+                    showToast('A few fields need your attention before we can send this order.');
+                    return;
+                }
+
+                const submitBtn = orderForm.querySelector('.submit-btn');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+
+                try {
+                    const formData = new FormData(orderForm);
+                    const res = await fetch(orderForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (res.ok) {
+                        successOverlay.classList.add('show');
+                        orderForm.reset();
+                        if (typeof resetOrderSummary === 'function') resetOrderSummary();
+                    } else {
+                        showToast('Something went wrong sending your order. Please try again or email us directly.');
+                    }
+                } catch (err) {
+                    showToast('Something went wrong sending your order. Please try again or email us directly.');
+                } finally {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+
+        if (oscCloseBtn) {
+            oscCloseBtn.addEventListener('click', () => successOverlay.classList.remove('show'));
+        }
+
+        // Respect reduced-motion preference for all JS-driven animation
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Navbar — subtle elevation once the page has scrolled
+        const navbarEl = document.querySelector('.navbar');
+        const onNavScroll = () => {
+            if (window.scrollY > 12) navbarEl.classList.add('scrolled');
+            else navbarEl.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onNavScroll, { passive: true });
+        onNavScroll();
+
+        // Scroll-reveal — fade + rise elements into view as the user scrolls
+        const revealTargets = document.querySelectorAll(
+            '.shoe-card, .feat-card, .testi-card, .life-img, .s-head, #faq details'
+        );
+        revealTargets.forEach(el => el.classList.add('reveal'));
+
+        if (prefersReducedMotion) {
+            revealTargets.forEach(el => el.classList.add('in-view'));
+        } else {
+            // stagger cards that share a parent row
+            const delayMap = new WeakMap();
+            const groups = {};
+            revealTargets.forEach(el => {
+                const key = el.parentElement;
+                groups[key] ? groups[key].push(el) : (groups[key] = [el]);
+            });
+            Object.values(groups).forEach(group => {
+                group.forEach((el, i) => { delayMap.set(el, Math.min(i * 90, 270)); });
+            });
+
+            const revealObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const delay = delayMap.get(el) || 0;
+                        // Apply the rise/fade transition only for the reveal moment,
+                        // then hand control back to the element's own CSS transition
+                        // (e.g. shoe-card / feat-card hover effects) so nothing else changes.
+                        el.style.transition = `opacity 0.7s ease ${delay}ms, transform 0.7s cubic-bezier(.22,1,.36,1) ${delay}ms`;
+                        el.classList.add('in-view');
+                        setTimeout(() => { el.style.transition = ''; }, delay + 760);
+                        obs.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            revealTargets.forEach(el => revealObserver.observe(el));
+        }
+
+        // Hero stat counters — count up once visible
+        const statNums = document.querySelectorAll('.h-stat .num[data-count]');
+        const animateCount = (el) => {
+            const target = parseFloat(el.getAttribute('data-count'));
+            const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+            const suffixHTML = el.getAttribute('data-suffix-html') ?? (el.getAttribute('data-suffix') || '');
+            const duration = 1400;
+            const start = performance.now();
+
+            const tick = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const value = target * eased;
+                el.innerHTML = (decimals ? value.toFixed(decimals) : Math.round(value)) + suffixHTML;
+                if (progress < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        };
+
+        if (statNums.length) {
+            if (prefersReducedMotion) {
+                statNums.forEach(el => {
+                    const target = parseFloat(el.getAttribute('data-count'));
+                    const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+                    const suffixHTML = el.getAttribute('data-suffix-html') ?? (el.getAttribute('data-suffix') || '');
+                    el.innerHTML = (decimals ? target.toFixed(decimals) : target) + suffixHTML;
+                });
+            } else {
+                const countObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCount(entry.target);
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.4 });
+                statNums.forEach(el => countObserver.observe(el));
+            }
+        }
+        // Scroll progress bar — fills as the visitor reads down the page
+        const progressBar = document.getElementById('scrollProgress');
+        const onScrollProgress = () => {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+            progressBar.style.width = pct + '%';
+        };
+        window.addEventListener('scroll', onScrollProgress, { passive: true });
+        window.addEventListener('resize', onScrollProgress);
+        onScrollProgress();
+
+        // Scrollspy — highlights the nav link for the section currently in view
+        const navAnchorLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+        const spySections = navAnchorLinks
+            .map(a => document.querySelector(a.getAttribute('href')))
+            .filter(Boolean);
+
+        if (spySections.length) {
+            const spyObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = '#' + entry.target.id;
+                        navAnchorLinks.forEach(a => {
+                            a.classList.toggle('active', a.getAttribute('href') === id && !a.classList.contains('nav-cta'));
+                        });
+                    }
+                });
+            }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+            spySections.forEach(sec => spyObserver.observe(sec));
+        }
+
+        // Floating quick-order button — appears once the hero is scrolled past
+        const quickOrderBtn = document.getElementById('quickOrderBtn');
+        const homeSection = document.getElementById('home');
+        if (quickOrderBtn && homeSection) {
+            const quickOrderObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => quickOrderBtn.classList.toggle('show', !entry.isIntersecting));
+            }, { threshold: 0 });
+            quickOrderObserver.observe(homeSection);
+        }
+
+        // Quantity stepper + live order summary — updates as the shopper builds their order
+        const modelSelect = document.getElementById('model');
+        const qtyInput = document.getElementById('qty');
+        const qtyMinus = document.getElementById('qtyMinus');
+        const qtyPlus = document.getElementById('qtyPlus');
+        const osDetail = document.getElementById('osDetail');
+        const osAmount = document.getElementById('osAmount');
+
+        const modelPrices = {
+            'blaze-x1': { name: 'Bolt Blaze X1', price: 129.99 },
+            'cloud-drift': { name: 'Bolt Cloud Drift', price: 109.99 },
+            'urban-street': { name: 'Bolt Urban Street', price: 149.99 }
+        };
+
+        function updateOrderSummary() {
+            if (!modelSelect || !osDetail || !osAmount) return;
+            const qty = parseInt(qtyInput.value, 10) || 1;
+            const selected = modelPrices[modelSelect.value];
+            qtyMinus.disabled = qty <= 1;
+            qtyPlus.disabled = qty >= 6;
+
+            if (!selected) {
+                osDetail.innerHTML = '<span class="os-empty">Pick a model above to see your total</span>';
+                osAmount.textContent = '$0.00';
+                return;
+            }
+
+            const total = selected.price * qty;
+            osDetail.innerHTML = `<strong>${selected.name}</strong> &nbsp;×&nbsp; ${qty} ${qty === 1 ? 'pair' : 'pairs'}`;
+            osAmount.textContent = '$' + total.toFixed(2);
+        }
+
+        function resetOrderSummary() {
+            if (qtyInput) qtyInput.value = '1';
+            updateOrderSummary();
+        }
+
+        if (qtyMinus && qtyPlus && qtyInput) {
+            qtyMinus.addEventListener('click', () => {
+                qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1);
+                updateOrderSummary();
+            });
+            qtyPlus.addEventListener('click', () => {
+                qtyInput.value = Math.min(6, (parseInt(qtyInput.value, 10) || 1) + 1);
+                updateOrderSummary();
+            });
+        }
+        if (modelSelect) modelSelect.addEventListener('change', updateOrderSummary);
+        updateOrderSummary();
+
+        // "Order Now" buttons on each shoe card jump to the form pre-filled with that model
+        document.querySelectorAll('.sc-btn[data-model]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (!modelSelect) return;
+                modelSelect.value = btn.getAttribute('data-model');
+                updateOrderSummary();
+            });
+        });
+
+        // Compare-table "Choose" buttons do the same pre-fill
+        document.querySelectorAll('.compare-cta[data-model]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (!modelSelect) return;
+                modelSelect.value = btn.getAttribute('data-model');
+                updateOrderSummary();
+            });
+        });
+
+        // Compare All Models — collapsible panel
+        const compareToggle = document.getElementById('compareToggle');
+        const comparePanel = document.getElementById('comparePanel');
+        if (compareToggle && comparePanel) {
+            compareToggle.addEventListener('click', () => {
+                const isOpen = comparePanel.classList.toggle('open');
+                compareToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                if (isOpen) {
+                    comparePanel.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'nearest' });
+                }
+            });
+        }
+
+        // Image lightbox — click any product/lifestyle photo to view it large
+        const galleryImgs = Array.from(document.querySelectorAll('.lightbox-trigger'));
+        const lightboxOverlay = document.getElementById('lightboxOverlay');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        let lightboxIndex = 0;
+
+        function openLightbox(index) {
+            lightboxIndex = (index + galleryImgs.length) % galleryImgs.length;
+            const target = galleryImgs[lightboxIndex];
+            lightboxImg.src = target.getAttribute('data-full') || target.src;
+            lightboxImg.alt = target.alt || '';
+            lightboxCaption.textContent = target.getAttribute('data-caption') || target.alt || '';
+            lightboxOverlay.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxOverlay.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+
+        if (galleryImgs.length && lightboxOverlay) {
+            galleryImgs.forEach((img, i) => {
+                img.setAttribute('tabindex', '0');
+                img.setAttribute('role', 'button');
+                img.setAttribute('aria-label', 'View larger image: ' + (img.getAttribute('data-caption') || img.alt));
+                img.addEventListener('click', () => openLightbox(i));
+                img.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(i); }
+                });
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', () => openLightbox(lightboxIndex - 1));
+            lightboxNext.addEventListener('click', () => openLightbox(lightboxIndex + 1));
+
+            lightboxOverlay.addEventListener('click', (e) => {
+                if (e.target === lightboxOverlay) closeLightbox();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!lightboxOverlay.classList.contains('show')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') openLightbox(lightboxIndex - 1);
+                if (e.key === 'ArrowRight') openLightbox(lightboxIndex + 1);
+            });
+        }
+    </script>
+</body>
+</html>
